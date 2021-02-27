@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @SpringBootApplication // dar start nos recursos 
-@EntityScan(basePackages = {"curso.api.rest.model"})
-@ComponentScan(basePackages = {"curso.*"})
-@EnableJpaRepositories(basePackages = {"curso.api.rest.repository"})
+@EntityScan(basePackages = {"curso.api.rest.model"})// cria as tabelas automaticas, le todas as classes desse pacote
+@ComponentScan(basePackages = {"curso.*"})//pega tudo q estiver dentro de curso e configura automatico
+@EnableJpaRepositories(basePackages = {"curso.api.rest.repository"})// cuida do crud
 @EnableTransactionManagement
 @EnableWebMvc
 @RestController
